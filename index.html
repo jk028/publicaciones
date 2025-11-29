@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis publicaciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <button class="back-btn" id="backButton">
+      <span class="back-icon"></span>
+    </button>
+    <h1 class="header-title" id="headerTitle">Mis publicaciones</h1>
+
+    <!-- Publicaciones eliminadas -->
+    <button class="deleted-btn" id="deletedButton" title="Publicaciones eliminadas">
+      🗑
+    </button>
+
+    <!-- Borradores -->
+    <button class="drafts-btn" id="draftsButton" title="Ver borradores">
+      📝
+    </button>
+
+    <!-- Nueva publicación -->
+    <button class="new-btn" id="newPostButton" title="Crear publicación">
+      💬
+    </button>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- VISTA: MIS PUBLICACIONES -->
+    <section id="view-list" class="mis-pub">
+      <div class="mis-pub-header mis-pub-header-main">
+        <div>
+          <h2>Mis publicaciones</h2>
+          <p class="mis-pub-subtitle">
+            Gestiona tus reportes y borradores de incidentes en la ciudad.
+          </p>
+        </div>
+
+        <!-- Selector de orden -->
+        <div class="sort-wrapper">
+          <label for="sortSelect">Ordenar por:</label>
+          <select id="sortSelect">
+            <option value="recientes">Más recientes</option>
+            <option value="antiguas">Más antiguas</option>
+            <option value="relevancia_desc">Mayor relevancia</option>
+            <option value="relevancia_asc">Menor relevancia</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mis-pub-grid">
+        <!-- Publicación Aprobada 1 -->
+        <article class="mis-pub-card" data-status="aprobada">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Publicación</h3>
+              <span class="status-badge status-aprobada">Verificada</span>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-menu" title="Opciones">⋮</button>
+              <button class="btn-editar" title="Editar">✏️</button>
+              <button class="btn-eliminar" title="Eliminar">🗑️</button>
+            </div>
+            <div class="card-menu">
+              <button class="menu-editar">Editar</button>
+              <button class="menu-eliminar">Eliminar</button>
+              <button class="menu-historial">Ver historial</button>
+            </div>
+          </div>
+
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Publicado: <span class="campo-fecha">20/11/2025 08:15</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a familia en Miraflores</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Una familia fue asaltada al salir de un restaurante en la Av. Larco. Los delincuentes huyeron en moto.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Miraflores - Av. Larco</span></p>
+
+            <img
+              src="img/incidente1.jpg"
+              alt="Imagen del incidente"
+              class="mis-pub-img"
+            >
+
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>12</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>132</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>67</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>3</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publicación Aprobada 2 -->
+        <article class="mis-pub-card" data-status="aprobada">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Publicación</h3>
+              <span class="status-badge status-aprobada">Verificada</span>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-menu" title="Opciones">⋮</button>
+              <button class="btn-editar" title="Editar">✏️</button>
+              <button class="btn-eliminar" title="Eliminar">🗑️</button>
+            </div>
+            <div class="card-menu">
+              <button class="menu-editar">Editar</button>
+              <button class="menu-eliminar">Eliminar</button>
+              <button class="menu-historial">Ver historial</button>
+            </div>
+          </div>
+
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Publicado: <span class="campo-fecha">21/11/2025 19:30</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+
+            <p><strong>Título:</strong> <span class="campo-titulo">Asalto en paradero de buses</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Varios pasajeros fueron amenazados con arma de fuego en un paradero de San Juan de Lurigancho durante la noche.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">San Juan de Lurigancho - Paradero 5</span></p>
+
+            <img
+              src="img/incidente2.png"
+              alt="Imagen del incidente"
+              class="mis-pub-img"
+            >
+
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>5</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>80</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>40</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>1</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publicación Aprobada 3 -->
+        <article class="mis-pub-card" data-status="aprobada">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Publicación</h3>
+              <span class="status-badge status-aprobada">Verificada</span>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-menu" title="Opciones">⋮</button>
+              <button class="btn-editar" title="Editar">✏️</button>
+              <button class="btn-eliminar" title="Eliminar">🗑️</button>
+            </div>
+            <div class="card-menu">
+              <button class="menu-editar">Editar</button>
+              <button class="menu-eliminar">Eliminar</button>
+              <button class="menu-historial">Ver historial</button>
+            </div>
+          </div>
+
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Publicado: <span class="campo-fecha">22/11/2025 13:05</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo de celular en el Metropolitano</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Un usuario reporta que le arrebataron el celular dentro del bus, a la altura de la estación Naranjal.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Independencia - Estación Naranjal</span></p>
+
+            <img
+              src="img/incidente3.jpg"
+              alt="Imagen del incidente"
+              class="mis-pub-img"
+            >
+
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>20</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>200</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>150</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>4</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publicación Por verificar -->
+        <article class="mis-pub-card" data-status="pendiente">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Publicación</h3>
+              <span class="status-badge status-pendiente">Por verificar</span>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-menu" title="Opciones">⋮</button>
+              <button class="btn-editar" title="Editar">✏️</button>
+              <button class="btn-eliminar" title="Eliminar">🗑️</button>
+            </div>
+            <div class="card-menu">
+              <button class="menu-editar">Editar</button>
+              <button class="menu-eliminar">Eliminar</button>
+              <button class="menu-historial">Ver historial</button>
+            </div>
+          </div>
+
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Publicado: <span class="campo-fecha">23/11/2025 22:10</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+
+            <p><strong>Título:</strong> <span class="campo-titulo">Intento de secuestro cerca de un colegio</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Vecinos reportan que un vehículo sospechoso intentó interceptar a una menor cerca de la salida del colegio. El caso está en revisión.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Cercado de Lima - Av. Abancay</span></p>
+
+            <img
+              src="img/incidente4.jpg"
+              alt="Imagen del incidente"
+              class="mis-pub-img"
+            >
+
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>45</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publicación Bloqueada -->
+        <article class="mis-pub-card" data-status="bloqueada">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Publicación</h3>
+              <span class="status-badge status-bloqueada">Bloqueada por moderador</span>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-menu" title="Opciones">⋮</button>
+              <button class="btn-editar" title="Editar">✏️</button>
+              <button class="btn-eliminar" title="Eliminar">🗑️</button>
+            </div>
+            <div class="card-menu">
+              <button class="menu-editar">Editar</button>
+              <button class="menu-eliminar">Eliminar</button>
+              <button class="menu-historial">Ver historial</button>
+            </div>
+          </div>
+
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Publicado: <span class="campo-fecha">24/11/2025 00:45</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+
+            <p style="color:#c62828; font-weight:bold; margin-bottom:0.3rem;">
+              Esta publicación ha sido bloqueada por infringir las normas de la comunidad.
+            </p>
+
+            <p><strong>Título:</strong> <span class="campo-titulo">Contenido denunciado por lenguaje ofensivo y datos sensibles</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              El reporte fue bloqueado temporalmente debido a denuncias por lenguaje inadecuado y datos sensibles.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Villa El Salvador - Jr. Los Ángeles</span></p>
+
+            <img
+              src="img/incidente5.jpg"
+              
+              class="mis-pub-img"
+            >
+
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>5</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- VISTA: BORRADORES -->
+    <section id="view-drafts" class="mis-pub hidden">
+      <div class="mis-pub-header">
+        <h2>Borradores</h2>
+        <p class="mis-pub-subtitle">
+          Revisa y continúa tus publicaciones guardadas como borrador.
+        </p>
+        <p class="drafts-indicator">
+          <span id="draftCount">00</span>/20 borradores disponibles
+        </p>
+      </div>
+
+      <div class="mis-pub-grid" id="drafts-grid">
+        <!-- 19 borradores (todos con "Eliminar borrador") -->
+
+        <!-- Borrador 1 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 1</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">20/11/2025 09:00</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Reporte de robo en San Miguel</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Se observó a dos personas arrebatando bolsos cerca del parque principal de San Miguel.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">San Miguel - Parque Media Luna</span></p>
+            <img src="img/borrador1.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 2 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 2</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">20/11/2025 10:20</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Asalto a peatones en La Molina</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Vecinos reportan constantes robos a peatones en los cruces cercanos a la Av. Javier Prado Este.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">La Molina - Av. Javier Prado Este</span></p>
+            <img src="img/borrador2.jpeg" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 3 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 3</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">20/11/2025 11:40</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a vehículo estacionado</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Se reporta la rotura de lunas y robo de pertenencias dentro de un auto estacionado frente a un edificio multifamiliar.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Surco - Av. Benavides</span></p>
+            <img src="img/borrador3.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 4 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 4</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">20/11/2025 13:15</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a transeúnte en ciclovía</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Un ciclista fue asaltado mientras se desplazaba por la ciclovía y le arrebataron la mochila con documentos importantes.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Lince - Ciclovía de Av. Arequipa</span></p>
+            <img src="img/borrador4.jpg" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 5 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 5</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">21/11/2025 08:30</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Intento de robo en mercado local</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Comerciantes reportan que sujetos sospechosos rondan los puestos y amenazan a quienes cierran tarde.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Breña - Mercado de Productores</span></p>
+            <img src="img/borrador5.jpeg" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 6 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 6</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">21/11/2025 10:10</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a motociclista</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Un motociclista reporta que fue interceptado por dos sujetos y le quitaron la moto en plena avenida.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Callao - Av. Faucett</span></p>
+            <img src="img/borrador6.jpeg" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 7 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 7</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">21/11/2025 11:50</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a estudiante universitario</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Estudiante reporta que le sustrajeron la laptop y documentos al salir de la universidad.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Pueblo Libre - Av. La Marina</span></p>
+            <img src="img/borrador7.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 8 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 8</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">21/11/2025 15:20</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo en edificio residencial</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Se reporta el ingreso de desconocidos a un edificio y el robo de bicicletas del sótano.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Magdalena - Jr. Castilla</span></p>
+            <img src="img/borrador8.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 9 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 9</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">22/11/2025 09:05</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo en parque infantil</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Padres denuncian que roban carteras y celulares mientras acompañan a sus hijos en el parque.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">San Borja - Parque de la Familia</span></p>
+            <img src="img/borrador9.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 10 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 10</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">22/11/2025 11:25</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a adulta mayor</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Una adulta mayor fue víctima del robo de su billetera al salir de una farmacia en la esquina principal.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Jesús María - Av. San Felipe</span></p>
+            <img src="img/borrador10.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 11 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 11</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">22/11/2025 14:05</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo de bicicleta en puente peatonal</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Ciudadano reporta que su bicicleta fue robada mientras estaba asegurada en la baranda del puente.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Rímac - Puente peatonal Caquetá</span></p>
+            <img src="img/borrador11.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 12 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 12</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">23/11/2025 09:45</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo de cartera en paradero informal</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Se reporta que sujetos aprovechan la aglomeración en paraderos informales para robar bolsos y carteras.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Comas - Av. Universitaria</span></p>
+            <img src="img/borrador12.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 13 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 13</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">23/11/2025 11:30</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo de mochilas en colegio</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Apoderados reportan que se han producido robos de mochilas dejadas sin supervisión en la puerta del colegio.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">San Juan de Miraflores - Zona escolar</span></p>
+            <img src="img/borrador13.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 14 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 14</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">23/11/2025 16:00</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo de autos en zona residencial</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Varios vecinos alertan de robos de autos estacionados en la vía pública durante la madrugada.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Surquillo - Urb. La Calera</span></p>
+            <img src="img/borrador14.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 15 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 15</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">24/11/2025 08:15</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a repartidor de delivery</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Un repartidor denuncia que le robaron el pedido y su celular mientras realizaba una entrega nocturna.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Chorrillos - Av. Defensores del Morro</span></p>
+            <img src="img/borrador15.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 16 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 16</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">24/11/2025 10:40</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo en grifo durante la noche</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Se reportan asaltos a conductores cuando se detienen a cargar combustible en horas de la madrugada.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Ate - Carretera Central</span></p>
+            <img src="img/borrador16.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 17 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 17</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">24/11/2025 13:25</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo de mercadería a comerciante</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Comerciante ambulante reporta que le robaron la mercadería cuando se disponía a retirarse del lugar.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Cercado de Lima - Jr. de la Unión</span></p>
+            <img src="img/borrador17.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 18 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 18</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">24/11/2025 15:45</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Intento de robo en transporte público</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Pasajeros reportan que sujetos se suben a las combis para robar celulares en horas punta.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Villa María del Triunfo - Ruta a Pamplona</span></p>
+            <img src="img/borrador18.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Borrador 19 -->
+        <article class="mis-pub-card">
+          <div class="mis-pub-card-header">
+            <div class="title-status">
+              <h3>Borrador 19</h3>
+            </div>
+            <div class="mis-pub-actions">
+              <button class="btn-publicar-borrador" title="Publicar borrador">☑️</button>
+              <button class="btn-editar" title="Editar borrador">✏️</button>
+              <button class="btn-eliminar" title="Eliminar borrador">🗑️</button>
+            </div>
+          </div>
+          <div class="mis-pub-card-body">
+            <p class="pub-fecha">
+              <small>Creado: <span class="campo-fecha">24/11/2025 18:05</span></small>
+              <span class="editado-label hidden">Editado</span>
+              <span class="sync-label hidden"></span>
+            </p>
+            <p><strong>Título:</strong> <span class="campo-titulo">Robo a familia en cruce peligroso</span></p>
+            <p><strong>Descripción:</strong> <span class="campo-descripcion">
+              Familia reporta que fue rodeada por delincuentes en un cruce poco iluminado mientras se dirigían a casa.
+            </span></p>
+            <p><strong>Etiquetas:</strong> <span class="campo-etiquetas">#robo #familiaEnApuros #seguridadCiudadana</span></p>
+            <p><strong>Ubicación:</strong> <span class="campo-ubicacion">Los Olivos - Cruce de Av. Universitaria con Panamericana Norte</span></p>
+            <img src="img/borrador19.png" alt="Imagen borrador" class="mis-pub-img">
+            <div class="mis-pub-metrics">
+              <div class="metric-pill"><span class="metric-icon">💬</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👁️</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👍</span><span>0</span></div>
+              <div class="metric-pill"><span class="metric-icon">👎</span><span>0</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- VISTA: PUBLICACIONES ELIMINADAS -->
+    <section id="view-deleted" class="mis-pub hidden">
+      <div class="mis-pub-header">
+        <h2>Publicaciones eliminadas</h2>
+        <p class="mis-pub-subtitle">
+          Las publicaciones se conservan aquí durante 48 horas antes de eliminarse definitivamente.
+        </p>
+      </div>
+
+      <div class="mis-pub-grid" id="deleted-grid"></div>
+    </section>
+
+    <!-- VISTA: EDITAR / CREAR -->
+    <section id="view-edit" class="edit-pub hidden">
+      <h2>Editar publicación</h2>
+
+      <form id="editForm">
+        <label class="edit-label">
+          Título
+          <input type="text" id="editTitulo" class="edit-input" required>
+        </label>
+
+        <label class="edit-label">
+          Descripción:
+          <textarea id="editDescripcion" class="edit-textarea" rows="4" required></textarea>
+        </label>
+
+        <label class="edit-label">
+          Etiquetas:
+          <textarea id="editEtiquetas" class="edit-textarea" rows="3"
+            placeholder="#robo #familiaEnApuros #seguridadCiudadana"></textarea>
+        </label>
+
+        <label class="edit-label">
+          Ubicación del incidente:
+          <input type="text" id="editUbicacion" class="edit-input" placeholder="Obligatorio..." required>
+        </label>
+
+        <div class="auto-ubicacion-row">
+           <label>
+             <input type="checkbox" id="autoUbicacion" />
+             Ubicar automáticamente
+           </label>
+        </div>
+
+        <div class="edit-adjuntar">
+          <span>Adjuntar imagen</span>
+          <label for="editImagen" class="edit-file-label">📎</label>
+          <input type="file" id="editImagen" class="edit-file-input" accept="image/*">
+        </div>
+
+        <div class="edit-actions">
+          <button type="button" id="btnGuardarBorrador" class="edit-borrador">Guardar como borrador</button>
+          <button type="submit" class="edit-confirmar">Publicar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- MODAL AVISO GENÉRICO -->
+  <div id="modalAviso" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <h2>Aviso</h2>
+      <p id="modalAvisoTexto">Acción realizada correctamente.</p>
+      <button id="modalOk" class="modal-ok">Ok</button>
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMAR ELIMINACIÓN -->
+  <div id="modalEliminar" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <h2>Aviso</h2>
+      <p>¿Está seguro de eliminar la publicación?</p>
+      <div class="modal-actions">
+        <button id="btnEliminarSi" class="modal-yes">Sí</button>
+        <button id="btnEliminarNo" class="modal-no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PUBLICAR BORRADOR -->
+  <div id="modalPublicarBorrador" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <h2>Aviso</h2>
+      <p id="textoModalPublicar">¿Listo para publicar el borrador?</p>
+      <div class="modal-actions">
+        <button id="btnPubliSi" class="modal-yes">Sí</button>
+        <button id="btnPubliNo" class="modal-no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL LÍMITE BORRADORES -->
+  <div id="modalLimiteBorradores" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <h2>Límite de borradores</h2>
+      <p>Has alcanzado el máximo de 20 borradores. Elimina o publica algunos borradores antes de crear más.</p>
+      <button id="modalLimiteOk" class="modal-ok">Entendido</button>
+    </div>
+  </div>
+
+  <!-- MODAL HISTORIAL -->
+  <div id="modalHistorial" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog historial-dialog">
+      <h2>Historial de cambios</h2>
+      <div id="historialContenido" class="historial-contenido"></div>
+      <button id="modalHistorialOk" class="modal-ok">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- MODAL SINCRONIZACIÓN -->
+  <div id="modalSync" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <h2>Sincronización</h2>
+      <p id="syncText">
+        <span class="spinner"></span> Sincronizando...
+      </p>
+    </div>
+  </div>
+
+  <!-- MODAL COMENTARIOS -->
+  <div id="modalComments" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog comments-dialog">
+      <h2>Comentarios</h2>
+
+      <div id="commentsList" class="comments-list"></div>
+
+      <form id="commentForm" class="comment-form">
+        <textarea
+          id="commentText"
+          class="comment-textarea"
+          rows="3"
+          placeholder="Escribe un comentario..."
+          required
+        ></textarea>
+
+        <p id="replyingInfo" class="replying-info hidden">
+          Respondiendo a un comentario…
+        </p>
+
+        <button type="submit" class="comment-submit">Enviar</button>
+      </form>
+
+      <button id="modalCommentsClose" class="modal-ok">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="js/js.js"></script>
+</body>
+</html>
+
