@@ -1,1 +1,623 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eaf5f6;
+  color: #222;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* HEADER */
+
+.header {
+  background: #2ec9b9;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+.header-title {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.deleted-btn,
+.drafts-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.new-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+/* MAIN */
+
+main {
+  padding: 1.5rem 0.5rem 2.5rem;
+}
+
+/* CONTENEDORES */
+
+.mis-pub {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+  background: #f5fdfd;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.mis-pub-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.mis-pub-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #39b8b2;
+}
+
+.mis-pub-subtitle {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.drafts-indicator {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* cabecera principal con selector de orden */
+
+.mis-pub-header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.sort-wrapper label {
+  white-space: nowrap;
+}
+
+#sortSelect {
+  border-radius: 999px;
+  border: 1px solid #d0d0d0;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.85rem;
+  background: #ffffff;
+}
+
+.mis-pub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.mis-pub-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e2e2;
+  padding: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.mis-pub-card-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.title-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.mis-pub-card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+}
+
+.status-aprobada {
+  background: #e0f7f4;
+  color: #0b8c7d;
+}
+
+.status-pendiente {
+  background: #fff8e1;
+  color: #ff8f00;
+}
+
+.status-bloqueada {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.mis-pub-actions {
+  display: flex;
+  align-items: center;
+}
+
+.mis-pub-actions .btn-editar,
+.mis-pub-actions .btn-eliminar {
+  display: none;
+}
+
+.btn-menu {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.card-menu {
+  position: absolute;
+  right: 0.5rem;
+  top: 2.1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  padding: 0.3rem 0;
+  min-width: 140px;
+  display: none;
+  z-index: 5;
+}
+
+.card-menu button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.card-menu button:hover {
+  background: #f5f5f5;
+}
+
+.mis-pub-card-body p {
+  margin: 0.15rem 0;
+  font-size: 0.9rem;
+}
+
+.mis-pub-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 0.6rem;
+  object-fit: cover;
+}
+
+/* fecha / editado / sync */
+
+.pub-fecha {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.editado-label {
+  font-size: 0.75rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.06);
+}
+
+.sync-label {
+  font-size: 0.75rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: #fff3e0;
+  color: #ff8f00;
+}
+
+/* métricas */
+
+.mis-pub-metrics {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #f0f0f0;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.metric-icon {
+  font-size: 0.9rem;
+}
+
+/* EDITAR / CREAR */
+
+.edit-pub {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+  background: #f5fdfd;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.edit-pub h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #39b8b2;
+}
+
+.edit-label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.edit-input,
+.edit-textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  font: inherit;
+  resize: vertical;
+}
+
+.edit-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.edit-adjuntar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.edit-file-input {
+  display: none;
+}
+
+.edit-file-label {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.edit-borrador,
+.edit-confirmar {
+  flex: 1;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.edit-borrador {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.edit-confirmar {
+  background: #202020;
+  color: #ffffff;
+}
+
+/* MODALES */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.modal-dialog {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.modal-dialog h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+}
+
+.modal-dialog p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.modal-ok,
+.modal-yes,
+.modal-no {
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.modal-ok,
+.modal-yes {
+  background: #202020;
+  color: #ffffff;
+}
+
+.modal-no {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* historial */
+
+.historial-dialog {
+  max-width: 380px;
+}
+
+.historial-contenido {
+  max-height: 260px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.historial-contenido ul {
+  padding-left: 1.1rem;
+}
+
+/* spinner */
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #333;
+  animation: spin 0.7s linear infinite;
+  margin-right: 0.4rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* MODAL COMENTARIOS */
+
+.comments-dialog {
+  max-width: 420px;
+  text-align: left;
+}
+
+.comments-list {
+  max-height: 260px;
+  overflow-y: auto;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.no-comments {
+  margin: 0 0 0.5rem;
+  color: #777;
+}
+
+.comment-item {
+  border-bottom: 1px solid #eee;
+  padding: 0.4rem 0;
+}
+
+.comment-reply {
+  padding-left: 0.8rem;
+  border-left: 2px solid #e0e0e0;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.15rem;
+}
+
+.comment-author {
+  font-weight: 600;
+}
+
+.comment-time {
+  font-style: italic;
+}
+
+.comment-body {
+  margin: 0.15rem 0 0.25rem;
+}
+
+.comment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.comment-actions button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  color: #1976d2;
+}
+
+.comment-actions button:hover {
+  text-decoration: underline;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.comment-textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  padding: 0.4rem 0.5rem;
+  font: inherit;
+  resize: vertical;
+}
+
+.replying-info {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.comment-submit {
+  align-self: flex-end;
+  border: none;
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #202020;
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+  main {
+    padding: 2rem 1rem 3rem;
+  }
+  .mis-pub {
+    padding: 2rem 2rem 2.4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .mis-pub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.mis-pub-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#view-drafts .mis-pub-actions .btn-publicar-borrador,
+#view-drafts .mis-pub-actions .btn-editar,
+#view-drafts .mis-pub-actions .btn-eliminar {
+  display: inline-flex;      /* o inline-block */
+}
 
